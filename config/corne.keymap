@@ -9,25 +9,30 @@
 
 / {
     macros {
-        alt_back: alt_back {
+        zoom_in: zoom_in {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_ALT &kp BACKSPACE>;
-            label = "ALT_BACK";
+            bindings = <&kp RIGHT_COMMAND &kp PLUS>;
+            label = "ZOOM_IN";
         };
 
-        shift_enter: shift_enter {
+        zoom_out: zoom_out {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp ENTER &kp LEFT_SHIFT>;
-            label = "SHIFT_ENTER";
+            bindings = <&kp RIGHT_COMMAND &kp KP_MINUS>;
+            label = "ZOOM_OUT";
         };
+    };
 
-        ctrl_e: ctrl_e {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_CONTROL &kp E>;
-            label = "CTRL_E";
+    behaviors {
+        homerow_mods: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
         };
     };
 
@@ -43,10 +48,10 @@
 
             display-name = "Base";
             bindings = <
-&mo 4           &kp Q  &kp W               &kp E           &kp R               &kp T    &kp Y  &kp U  &kp I      &kp O    &kp P     &none
-&none           &kp A  &mt LEFT_CONTROL S  &mt LEFT_ALT D  &mt F LEFT_COMMAND  &kp G    &kp H  &kp J  &kp K      &kp L    &kp SEMI  &none
-&studio_unlock  &kp Z  &kp X               &kp C           &kp V               &kp B    &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &none
-                                           &mo 6           &sk LEFT_SHIFT      &mo 5    &mo 3  &mo 1  &none
+&mo 4           &kp Q  &kp W                         &kp E                     &kp R                         &kp T    &kp Y  &kp U                          &kp I                      &kp O                          &kp P       &none
+&none           &kp A  &homerow_mods LEFT_CONTROL S  &homerow_mods LEFT_ALT D  &homerow_mods F LEFT_COMMAND  &kp G    &kp H  &homerow_mods RIGHT_COMMAND J  &homerow_mods RIGHT_ALT K  &homerow_mods RIGHT_CONTROL L  &lt 0 SEMI  &none
+&studio_unlock  &kp Z  &kp X                         &kp C                     &kp V                         &kp B    &kp N  &kp M                          &kp COMMA                  &kp DOT                        &kp FSLH    &none
+                                                     &mo 6                     &sk LEFT_SHIFT                &mo 5    &mo 3  &mo 1                          &none
             >;
         };
 
@@ -59,35 +64,28 @@
 
             display-name = "Lower";
             bindings = <
-&trans  &kp ESCAPE  &trans     &kp N3         &kp N4      &kp N5          &kp N6    &kp N7    &kp N8    &kp N9     &kp N0  &kp BSPC
-&trans  &kp TAB     &alt_back  &kp BACKSPACE  &kp ESCAPE  &shift_enter    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans
-&trans  &trans      &trans     &trans         &trans      &trans          &trans    &trans    &trans    &trans     &trans  &trans
-                               &trans         &trans      &kp ENTER       &kp RET   &trans    &kp RALT
+&trans  &kp ESCAPE  &trans             &kp LC(E)      &kp LC(R)   &kp N5           &trans  &trans          &kp UP_ARROW  &zoom_out  &zoom_in   &trans
+&trans  &kp TAB     &kp LA(BACKSPACE)  &kp BACKSPACE  &kp ESCAPE  &kp LS(ENTER)    &trans  &kp LEFT_ARROW  &kp UP        &kp RIGHT  &kp ENTER  &trans
+&trans  &trans      &trans             &trans         &trans      &trans           &trans  &trans          &trans        &trans     &trans     &trans
+                                       &trans         &trans      &kp ENTER        &trans  &trans          &trans
             >;
         };
 
-        Media {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            display-name = "Raise";
+        media {
             bindings = <
-&kp TAB    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp BSPC
-&kp LCTRL  &trans    &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT  &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
-                             &kp LGUI  &trans    &kp SPACE    &kp RET    &trans     &kp RALT
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp K_MUTE  &kp C_VOLUME_UP  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp J       &kp C_VOL_DN     &kp L   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans           &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans      &trans
             >;
         };
 
         symbol {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &kp PIPE   &kp ASTRK  &kp EXCL  &kp AMPS  &kp PERCENT    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp COLON  &trans     &trans    &trans    &trans         &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans     &trans    &trans    &trans         &trans  &trans  &trans  &trans  &trans  &trans
+                              &trans    &trans    &trans         &trans  &trans  &trans
             >;
         };
 
