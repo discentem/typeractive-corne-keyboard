@@ -67,7 +67,7 @@
 
         symbol {
             bindings = <
-&trans  &kp PIPE       &kp ASTRK             &kp EXCL      &kp AMPS      &kp PERCENT         &kp DOLLAR  &kp LS(UNDER)  &kp MINUS      &kp LBKT   &kp RBKT  &trans
+&trans  &kp PIPE       &kp ASTRK             &kp EXCL      &kp AMPS      &kp MINUS           &kp DOLLAR  &kp LS(UNDER)  &kp MINUS      &kp LBKT   &kp RBKT  &trans
 &trans  &kp COLON      &kp LS(SINGLE_QUOTE)  &kp LS(LBRC)  &kp LS(LPAR)  &kp LS(PLUS)        &kp EQUAL   &kp LS(RPAR)   &kp LS(RBRC)   &kp GRAVE  &kp SEMI  &trans
 &trans  &kp LS(TILDE)  &kp LS(POUND)         &kp LS(AT)    &kp LBKT      &kp FSLH            &kp BSLH    &kp LS(POUND)  &kp LS(CARET)  &kp DOT    &kp FSLH  &trans
                                              &trans        &trans        &kp SINGLE_QUOTE    &trans      &trans         &trans
