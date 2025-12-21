@@ -7,6 +7,7 @@ parse_config:
     '&hm RCTRL L': "L (CTRL)"
     '&kp LS(LG(KP_NUMBER_5))': "SCREEN SHOT"
     '&kp KP_MINUS': "-"
+    '&studio_unlock': "UNLOCK"
 
 
   zmk_keycode_map:
