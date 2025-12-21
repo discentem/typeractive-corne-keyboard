@@ -49,9 +49,9 @@
 
             display-name = "Lower";
             bindings = <
-&trans  &kp ESCAPE  &trans             &kp LC(E)      &kp LC(R)   &kp LG(LS(N5))    &trans  &trans          &kp UP_ARROW  &kp RG(MINUS)  &kp RG(PLUS)  &trans
-&trans  &kp TAB     &kp LA(BACKSPACE)  &kp BACKSPACE  &kp ESCAPE  &kp LC(LG(F))     &trans  &kp LEFT_ARROW  &kp UP        &kp RIGHT      &kp ENTER     &trans
-&trans  &trans      &trans             &trans         &trans      &trans            &trans  &trans          &trans        &trans         &trans        &trans
+&trans  &kp ESCAPE  &trans             &kp LC(E)      &kp LC(R)   &kp LG(LS(N5))    &trans  &trans          &kp UP_ARROW  &kp RG(MINUS)  &kp RG(EQUAL)  &trans
+&trans  &kp TAB     &kp LA(BACKSPACE)  &kp BACKSPACE  &kp ESCAPE  &kp LC(LG(F))     &trans  &kp LEFT_ARROW  &kp UP        &kp RIGHT      &kp ENTER      &trans
+&trans  &trans      &trans             &trans         &trans      &trans            &trans  &trans          &trans        &trans         &trans         &trans
                                        &trans         &trans      &kp ENTER         &trans  &trans          &trans
             >;
         };
