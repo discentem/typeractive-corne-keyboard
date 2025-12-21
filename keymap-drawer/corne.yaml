@@ -25,7 +25,7 @@ layers:
   - {t: L, h: RIGHT CONTROL}
   - {t: ;, h: media}
   - ''
-  - '&studio_unlock'
+  - UNLOCK
   - Z
   - X
   - C
@@ -197,7 +197,7 @@ layers:
   - {t: BT, h: '4'}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&studio_unlock'
+  - UNLOCK
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
