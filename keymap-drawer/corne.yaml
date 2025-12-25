@@ -76,7 +76,7 @@ layers:
     SCREEN'
   - {t: ▽, type: trans}
   - LEFT
-  - UP
+  - DOWN
   - RIGHT
   - ENTER
   - {t: ▽, type: trans}
