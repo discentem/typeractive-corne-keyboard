@@ -15,14 +15,14 @@ layers:
   - ''
   - ''
   - A
-  - {t: S, h: LEFT CONTROL}
+  - {t: S, h: CTRL}
   - {t: D, h: Alt}
   - {t: F, h: CMD}
   - G
   - H
   - {t: J, h: CMD}
   - {t: K, h: Alt}
-  - {t: L, h: RIGHT CONTROL}
+  - {t: L, h: CTRL}
   - {t: ;, h: media}
   - ''
   - UNLOCK
@@ -45,23 +45,35 @@ layers:
   - ''
   Lower:
   - {t: ▽, type: trans}
-  - ESCAPE
+  - Esc
   - {t: ▽, type: trans}
   - Ctl+E
   - Ctl+R
-  - Gui+Sft+5
+  - 'SCREEN
+
+    SHOT'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - UP
-  - Gui+-
-  - Gui+=
+  - 'ZOOM
+
+    OUT'
+  - 'ZOOM
+
+    IN'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - TAB
-  - Alt+BACK
-  - BACK
-  - ESCAPE
-  - Ctl+Gui+F
+  - 'BACK
+
+    SPACE    WORD'
+  - 'BACK
+
+    SPACE'
+  - Esc
+  - 'FULL
+
+    SCREEN'
   - {t: ▽, type: trans}
   - LEFT
   - UP
@@ -94,7 +106,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Mute
+  - MUTE
   - Vol Up
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -107,7 +119,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - J
-  - VOL DN
+  - Vol Down
   - L
   - {type: held}
   - {t: ▽, type: trans}
@@ -137,32 +149,32 @@ layers:
   - '&'
   - '-'
   - $
-  - Sft+_
+  - _
   - '-'
   - '['
   - ']'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ':'
-  - Sft+'
-  - Sft+{
-  - Sft+(
-  - Sft++
+  - ''''
+  - '{'
+  - (
+  - +
   - '='
-  - Sft+)
-  - Sft+}
+  - )
+  - '}'
   - '`'
   - ;
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Sft+~
-  - Sft+#
-  - Sft+@
+  - '~'
+  - '#'
+  - '@'
   - '['
   - /
   - \
-  - Sft+#
-  - Sft+^
+  - '#'
+  - ^
   - .
   - /
   - {t: ▽, type: trans}
@@ -217,16 +229,16 @@ layers:
   - {t: ▽, type: trans}
   numrow:
   - {t: ▽, type: trans}
-  - Sft+!
-  - Sft+@
-  - Sft+#
-  - Sft+$
-  - Sft+%
-  - Sft+^
-  - Sft+&
-  - Sft+*
-  - Sft+(
-  - Sft+)
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - ^
+  - '&'
+  - '*'
+  - (
+  - )
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '1'
@@ -255,7 +267,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  - BACK
+  - 'BACK
+
+    SPACE'
   - ENTER
   - {t: ▽, type: trans}
   symrow:
@@ -272,16 +286,16 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Sft+!
-  - Sft+@
-  - Sft+#
-  - Sft+$
-  - Sft+%
-  - Sft+^
-  - Sft+&
-  - Sft+*
-  - Sft+(
-  - Sft+)
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - ^
+  - '&'
+  - '*'
+  - (
+  - )
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}

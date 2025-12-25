@@ -1,21 +1,41 @@
 parse_config:
   raw_binding_map:
-    '&hm LCTRL S': "CTRL / (S)"
-    '&hm LEFT_ALT D': "ALT / (D)"
-    '&hm LEFT_COMMAND J': "J (CMD)"
-    '&hm RIGHT_ALT K': "K (ALT)" 
-    '&hm RCTRL L': "L (CTRL)"
-    '&kp LS(LG(KP_NUMBER_5))': "SCREEN SHOT"
+    '&kp LG(LS(N5))': "SCREEN\nSHOT"
     '&kp KP_MINUS': "-"
     '&studio_unlock': "UNLOCK"
+    '&studio_unlock': "UNLOCK"
+    '&kp BACKSPACE': "BACK\nSPACE"
+    '&kp LA(BACKSPACE)': "BACK\nSPACE\NWORD"
+    '&kp LC(LG(F))': "FULL\nSCREEN"
+    '&kp RG(MINUS)': "ZOOM\nOUT"
+    '&kp RG(EQUAL)': "ZOOM\nIN"
 
+    '&kp LS(SINGLE_QUOTE)': "'"
+    '&kp LS(LBRC)': '{'
+    '&kp LS(LPAR)': '('
+    '&kp LS(RBRC)': '}'
+    '&kp LS(RPAR)': ')'
+    '&kp LS(UNDER)': '_'
+    '&kp LS(TILDE)': '~'
+    '&kp LS(POUND)': '#'
+    '&kp LS(PLUS)': '+'
+    '&kp LS(CARET)': '^'
+    '&kp LS(AT)': '@'
+    '&kp LS(EXCL)': '!'
+    '&kp LS(DLLR)': '$'
+    '&kp LS(PRCNT)': '%'
+    '&kp LS(AMPS)': '&'
+    '&kp LS(STAR)': '*'
+    '&kp LS(RIGHT_PARENTHESIS)': ')'
 
   zmk_keycode_map:
-    # custom mappings
+    # # custom mappings
     C_VOLUME_UP: Vol Up
-    C_VOLUME_DOWN: Vol Down
-    K_MUTE: Mute
+    C_VOL_DN: Vol Down
+    # K_MUTE: Mute
 
+    LEFT_CONTROL: CTRL
+    RIGHT_CONTROL: CTRL
     LCTRL: Ctrl
     RCTRL: Ctrl
     LEFT_ALT: Alt
@@ -24,9 +44,8 @@ parse_config:
     RIGHT_COMMAND: CMD
     LEFT_SHIFT: Shift
     RIGHT_SHIFT: Shift
-    ESC: Esc
+    ESCAPE: Esc
     SPACE: SPACE
-    BACKSPACE: BACK
     RET: ENTER
     TAB: TAB
     DEL: DEL
@@ -36,11 +55,11 @@ parse_config:
     LEFT_ARROW: LEFT
     RIGHT_ARROW: RIGHT
 
-    C_PP: ⏯
-    C_NEXT: ⏭️
-    C_PREV: ⏮️
+    # C_PP: ⏯
+    # C_NEXT: ⏭️
+    # C_PREV: ⏮️
 
-    # defaults
+    # # defaults
     AMPERSAND: '&'
     AMPS: '&'
     APOS: "'"
