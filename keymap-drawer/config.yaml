@@ -3,7 +3,7 @@ parse_config:
     '&kp LG(LS(N5))': "SCREEN\nSHOT"
     '&kp KP_MINUS': "-"
     '&studio_unlock': "UNLOCK"
-    '&studio_unlock': "UNLOCK"
+    '&bootloader': "BOOT\nLOADER"
     '&kp BACKSPACE': "BACK\nSPACE"
     '&kp LA(BACKSPACE)': "BACK\nSPACE\NWORD"
     '&kp LC(LG(F))': "FULL\nSCREEN"
