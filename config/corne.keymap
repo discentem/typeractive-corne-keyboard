@@ -58,10 +58,10 @@
 
         media {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp K_MUTE  &kp C_VOLUME_UP  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp J       &kp C_VOL_DN     &kp L   &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans           &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans      &trans
+&trans  &trans  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans  &trans    &trans  &kp K_MUTE  &kp C_VOLUME_UP  &trans  &trans  &trans
+&trans  &trans  &trans                &trans                &trans  &trans    &trans  &kp J       &kp C_VOL_DN     &kp L   &trans  &trans
+&trans  &trans  &trans                &trans                &trans  &trans    &trans  &trans      &trans           &trans  &trans  &trans
+                                      &trans                &trans  &trans    &trans  &trans      &trans
             >;
         };
 
