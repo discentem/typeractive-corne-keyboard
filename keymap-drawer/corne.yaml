@@ -101,8 +101,8 @@ layers:
   media:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - BRIGHTNESS DEC
+  - BRIGHTNESS INC
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
